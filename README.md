@@ -1,2 +1,2 @@
 # DevEdge-IoTDevKit-Binaries
-DevEdge Binaries etc.
+DevKit Binaries etc.
