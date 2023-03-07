@@ -2,9 +2,9 @@
 # Copyright (c) 2023 T-Mobile USA, Inc.
 #
 
-SOURCES_BIN	:= $(wildcard **/*.bin)
-SOURCES_RPS	:= $(wildcard **/*.rps)
-SOURCES_UA	:= $(wildcard **/*.ua)
+SOURCES_BIN	:= $(shell find * -type f -name '*.bin')
+SOURCES_RPS	:= $(shell find * -type f -name '*.rps')
+SOURCES_UA	:= $(shell find * -type f -name '*.ua')
 TARGETS		:= $(SOURCES_BIN:%.bin=%.bin.sha1) $(SOURCES_RPS:%.rps=%.rps.sha1) $(SOURCES_UA:%.ua=%.ua.sha1)
 SOURCE_DIRS	:= $(sort $(dir $(TARGETS)))
 
