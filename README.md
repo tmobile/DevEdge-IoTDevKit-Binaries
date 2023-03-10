@@ -1,2 +1,15 @@
-# DevEdge-IoTDevKit-Binaries
-DevKit Binaries etc.
+Copyright © 2023 T-Mobile USA, Inc.
+ 
+Generally, and providing exception, files and binary or object code contained therein and within this repository include components originally developed by Murata Manufacturing Co., Ltd., Silcon Labs, or T-Mobile USA, Inc. to support T-Mobile DevEdge.
+ 
+The file titled murata/1sc contains creations originally developed by Murata Manufacturing Co., Ltd, and use of the binary or object code provided is authorized by the same only for use in relation to T-Mobile DevEdge and ownership is retained and is governed by Murata Manufacturing Co., Ltd.
+ 
+The file titled silabs/rs9116w contains creations originally developed by Silicon Labs and use of the binary or object code provided is authorized by the same only for use in relation to T-Mobile DevEdge and ownership is retained and is governed by Silcon Labs.
+ 
+All files, binary, object code, and any components provided in this repository (“Materials”) are provided only for use in relation to T-Mobile DevEdge and by using any portion of the same, you acknowledge and accept Materials provided, in whole or in part, are provided “as is” without warranties, representations, or conditions of any kind, either express or implied, including without limitation, any warranties or conditions of title, non-infringement, merchantability, or fitness for a particular purpose, to the extent allowed by applicable law and until proven through legal means. You are solely responsible for determining the appropriateness of using the Materials and you assume any risk associated with your use.
+ 
+You may act only on Your own behalf and use or action by You does not in any way represent any relationship with Murata Manufacturing Co., Ltd., Silcon Labs, or T-Mobile USA, Inc., or any affiliate, or subsidiary thereof. You agree to indemnify, defend, and hold harmless Murata Manufacturing Co., Ltd., Silcon Labs, or T-Mobile USA, Inc. for any liability incurred by or claims asserted against the same for any unauthorized use by You, or representations or warranties made or provided by You to a third party.
+ 
+Nothing provided herein, or Your use or participation, grants You permission to use the trade names, trademarks, service marks, or product names of Murata Manufacturing Co., Ltd., Silcon Labs, or T-Mobile USA, Inc.
+ 
+In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall Murata Manufacturing Co., Ltd., Silcon Labs, or T-Mobile USA, Inc., or any affiliate, subsidiary, representative, or any persons employed or contracted by the same, be liable to you for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of the use or inability to use the Materials (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if notice has been provided of the possibility of such damages.
