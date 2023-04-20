@@ -3,18 +3,15 @@
 #
 
 SOURCES_BIN	:= $(shell find * -type f -name '*.bin')
+SOURCES_IMG	:= $(shell find * -type f -name '*.img')
 SOURCES_RPS	:= $(shell find * -type f -name '*.rps')
 SOURCES_UA	:= $(shell find * -type f -name '*.ua')
-TARGETS		:= $(SOURCES_BIN:%.bin=%.bin.sha1) $(SOURCES_RPS:%.rps=%.rps.sha1) $(SOURCES_UA:%.ua=%.ua.sha1)
+
+SOURCES		:= $(SOURCES_BIN) $(SOURCES_IMG) $(SOURCES_RPS) $(SOURCES_UA)
+TARGETS		:= $(SOURCES:%=%.sha1)
 SOURCE_DIRS	:= $(sort $(dir $(TARGETS)))
 
-%.bin.sha1 : %.bin
-	cd $(@D) && shasum $(<F) >$(@F)
-
-%.rps.sha1 : %.rps
-	cd $(@D) && shasum $(<F) >$(@F)
-
-%.ua.sha1 : %.ua
+%.sha1: %
 	cd $(@D) && shasum $(<F) >$(@F)
 
 .PHONY: all
@@ -24,9 +21,6 @@ all: $(TARGETS)
 clean:
 	$(RM) $(TARGETS)
 
-.PHONY: $(SOURCE_DIRS)
-$(SOURCE_DIRS):
-	@echo "$@:"; cd $@; for sha1_file in *.sha1; do shasum -c $$sha1_file; done
-
 .PHONY: check
 check: $(SOURCE_DIRS)
+	for dir in $^; do pushd "$$dir" >/dev/null; echo "$$PWD"; for file in *.sha1; do shasum -c "$$file"; done; popd >/dev/null; done
